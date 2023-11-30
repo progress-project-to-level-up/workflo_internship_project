@@ -1,0 +1,158 @@
+
+@import-normalize;
+
+.myGlass{
+    display: flex;
+    position: absolute;
+    width: 292px;
+    height: 161px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 350px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.47);
+    background: radial-gradient(276.56% 104.32% at 5.34% 9.25%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.07) 40%);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+}
+
+.myGlass2{
+    display: flex;
+    position: absolute;
+    width: 292px;
+    height: 161px;
+    flex-shrink: 0;
+    margin-top: 250px;
+    margin-left: 150px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.47);
+    background: radial-gradient(276.56% 104.32% at 5.34% 9.25%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.07) 40%);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+}
+
+.myGlass3{
+    display: flex;
+    position: absolute;
+    width: 216px;
+    height: 119px;
+    flex-shrink: 0;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.47);
+    background: radial-gradient(276.56% 104.32% at 5.34% 9.25%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.07) 40%);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+}
+
+
+.glassHolder{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: start;
+    margin-left: 52%;
+    margin-top: 27%;
+}
+
+.imageHolder{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color:  aliceblue;
+    position:relative;
+    margin-left: 10px;
+
+}
+
+.threeDots{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.imageHolder img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 50%;
+}
+
+.textHolder{
+    color: white;
+    margin:0px;
+
+}
+
+.textHolder h2{
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.textHolder p{
+    margin-top: 0px;
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
+.imageHolder3{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color:  aliceblue;
+    position:relative;
+    margin-left: 10px;
+
+}
+
+.threeDots3{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.imageHolder3 img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 100%;
+}
+
+.textHolder3{
+    color: white;
+    margin:0px;
+
+}
+
+.textHolder3 h3{
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-size: 10px;
+}
+
+.textHolder3 p{
+    margin-top: 0px;
+    font-size: small;
+}
