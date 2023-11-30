@@ -1,0 +1,79 @@
+
+.creatorcard-container{
+    margin: auto;
+    display: flex;
+    /* position: absolute; */
+    /* left: 15%; */
+    width: fit-content;
+    padding: 100px 50px 10px 100px;
+    height: 600px;
+    gap: 7rem;
+    align-items: center;
+    
+}
+.photoHolder{
+    height: 100%;
+
+    /* width: 50%;
+
+    margin-left: -170px; */
+}
+
+
+.photoHolder img{
+    border-radius: 20px;
+    height: 100%;
+
+
+    /* margin-top: 50px;
+    width: 600px; */
+    
+}
+.textholder{
+    color: black;
+    width: 50%;
+    background-color: white;
+    height: 47vh;
+    margin-top: 10px;
+    height: 669px;
+    
+}   
+.textholder h2{
+    color: #1F1F1F;
+    font-family: Montserrat;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  
+}
+
+.textholder p{
+    margin-left: 60px;
+    margin-top: -40px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+
+    /* font-size: 30px; */
+}
+
+.textholder h4{
+    display: flex;
+    gap: 15px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.textholder img{
+    align-content: start;
+    align-items: start;
+}

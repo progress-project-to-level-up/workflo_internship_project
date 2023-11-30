@@ -1,0 +1,86 @@
+.main-project-container {
+  background-color: #f5f7f9;
+  margin-top: 60px;
+  padding: 10px 30px 20px 100px;
+}
+
+.active-project-container {
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #f733f8 0%, #2f31c8 100%)
+  );
+  width: fit-content;
+  color: #ffff;
+  width: 25%;
+  border-radius: 10px;
+}
+
+.active-project-text h1 {
+  color: #1f1f1f;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.role-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+}
+.image-project {
+  width: 100%;
+  border-radius: 10px;
+}
+.project-name {
+  margin-top: 0;
+  color: #fff;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.role-need {
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.description {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.project-details {
+  padding: 0px 15px;
+}
+.project-description {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main-card-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: fit-content;
+  margin: auto;
+  justify-content: center;
+
+}
+

@@ -1,0 +1,15 @@
+.create-project{
+    color: var(--Primary-Colour, #CA33F8);
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    border-radius: 15px;
+    border: 3px solid var(--Primary-Colour, #CA33F8);
+    background: #FFF;
+    width: 163px;
+    height: 50px;
+    font-size: 15.997px;
+    margin-top: 40px;
+}
