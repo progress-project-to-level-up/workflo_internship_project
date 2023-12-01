@@ -1,7 +1,7 @@
 import React from 'react'
 import "../card/HeroCard.css"
 import GlassCards from '../../../component/glassmorphism/GlassMorph.jsx'
-import Smile from '../../../asset/svg/smilinguy.svg'
+import Smile from '../../../asset/image/smillinguy.png'
 import Half from '../../../asset/image/halfbutton.png'
 import telegramIcon from '../../../asset/svg/cusorIcon.svg'
 

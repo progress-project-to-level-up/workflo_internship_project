@@ -6,7 +6,7 @@ import '../../component/buttons/projectbutton.css'
 const ProjectButton = () => {
   return (
     <div>
-        <button className='create-project'>create project</button>
+        <button className='create-project'>Create Project</button>
     </div>
   )
 }

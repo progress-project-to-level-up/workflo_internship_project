@@ -1,0 +1,1 @@
+import { NavbarInner } from '../../component/navbarInnerPages/NavbarInner'
