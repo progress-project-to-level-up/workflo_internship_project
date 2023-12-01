@@ -1,0 +1,74 @@
+.log-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 280px;
+    width: 70%;
+    height: 768px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.05);
+    margin: 5rem auto ;
+  
+  }
+  .text-container h1{
+    color: #ca33f8;
+    font-family: Poppins;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  
+  }
+  .text-container{
+    line-height: 40px;
+    width: 450px;
+  
+  }
+  
+  .image2-container img{
+    border-radius: 50px 0 0 50px;
+  }
+  
+  .loginInput-form input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 500px;
+    height: 60px;
+  }
+  /* .loginInput-form{
+  
+  } */
+  .text-container{
+    background: white;
+    border-radius: 50px;
+    width: 1120px;
+    height: 768px;
+    margin-left: 70px;
+    color: #b1b1b1;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+  
+  }
+  
+  .check-flex{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+  }
+  
+  
+  .check{
+  height: 20px;
+  width: 20px;
+  
+  margin-right: 5px;
+  
+  
+  border-radius: 100px;
+  }
