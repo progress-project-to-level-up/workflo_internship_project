@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import "../login/login.css";
-
-import Button from "../../component/buttons/Button";
-import loginPhoto from "../login/loginPhoto.svg";
+import loginPhoto from "../login/loginPhoto.jpg";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -40,8 +38,8 @@ const Login = () => {
         </div>
 
         <div className="text-container">
-          <h1 className="title-text">Welcome Back,</h1>
-          <p className="sub-text">Please login to continue ..</p>
+          <h1 className="title-text">Welcome back,</h1>
+          <p className="sub-text">Please sign in to continue</p>
 
           <form onSubmit={handleLogin}>
             <div className="loginInput-form">
@@ -54,16 +52,19 @@ const Login = () => {
             </div>
             <div className="check-flex">
               <input type="checkbox" className="check" />
-              <div className="forget">Remember me</div>
+              <div className="remember">Remember me</div>
               <div className="forget">Forgot password?</div>
             </div>
             <div className="btn-flex">
-              <button>sign in </button>
+              <button className="signinbutton">Sign In </button>
             </div>
           </form>
-          <Link to='/sign'>
-            <p className="sign-in-text"> sign up</p>
-          </Link>
+          <div className="sign-in">
+            <p>Don't have an account? </p>
+            <Link to='/sign'>
+              <p id="sign-in-text"> Sign up</p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
