@@ -1,10 +1,11 @@
 import axios from "axios";
 import React from "react";
-import cofeeImage from "../sigin/signUpPhoto.svg";
+import cofeeImage from "../sigin/creative.jpg";
 import "../sigin/signUp.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -69,16 +70,14 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="signup-container">
+      <div className="signup">
         <div className="image-signup-txt">
           <div className="drinking-cofee-img">
             <img src={cofeeImage} alt="" />
           </div>
-          <div className="sig-up-container">
-            <div>
+          <div className="signup-container">
               <h1>Sign Up</h1>
-              <p>Lets get you to the moon</p>
-            </div>
+              <p>Lets get your project done</p>
             <form onSubmit={handleRegister}>
               <div className="formInput">
                 <div>
@@ -133,15 +132,19 @@ const Signup = () => {
                     minLength="7"
                   />
                 </div>
-                <div >
-                  <button className="submit-btn" type="submit"> {btnTitle}</button>
+                <div>
+                  <button className="signupbutton" type="submit"> {btnTitle}</button>
                 </div>
               </div>
             </form>
 
-            <div>
-              <p>already have an account sign up here</p>
-            </div>
+          <div className="sign-up-texted">
+            <p>Already have an account? </p>
+            <Link to='/login'>            
+              <p id="sign-up-text"> Sign in</p>  
+            </Link>         
+          </div>
+
           </div>
         </div>
       </div>
