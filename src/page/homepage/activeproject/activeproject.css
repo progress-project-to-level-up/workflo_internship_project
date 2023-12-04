@@ -2,6 +2,12 @@
   background-color: #f5f7f9;
   margin-top: 60px;
   padding: 10px 30px 20px 100px;
+
+    /* margin-left: 200px; */
+
+    /* width: 100%; */
+
+  /* margin-left: -200px; */
 }
 
 .active-project-container {
@@ -13,16 +19,20 @@
   color: #ffff;
   width: 25%;
   border-radius: 10px;
+
+  /* margin-left: 200px; */
 }
 
 .active-project-text h1 {
   color: #1f1f1f;
-  font-family: Montserrat;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
+
+  
 }
 
 .role-container {
@@ -38,7 +48,7 @@
 .project-name {
   margin-top: 0;
   color: #fff;
-  font-family: Inter;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -47,7 +57,7 @@
 }
 .role-need {
   color: #fff;
-  font-family: Inter;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -56,7 +66,7 @@
 }
 .description {
   color: #fff;
-  font-family: Montserrat;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 600;
@@ -68,7 +78,7 @@
 }
 .project-description {
   color: #fff;
-  font-family: Montserrat;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -82,5 +92,68 @@
   margin: auto;
   justify-content: center;
 
+  margin-left: -200px;
+
 }
 
+
+
+
+.active-btn{
+background-color: antiquewhite;
+
+width: 113px;
+height: 40px;
+
+border-radius: 10px;
+background: #FFF;
+
+border: none;
+color: #2F31C8;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+text-transform: capitalize;
+
+
+cursor: pointer;
+
+}
+
+
+.seeProject-btn{
+
+  margin-top: 20px;
+  width: 210px;
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+
+  border-radius: 15px;
+  background: var(--Gradient, linear-gradient(180deg, #F733F8 0%, #2F31C8 100%));
+
+  padding: 0px 20px 0px 20px;
+
+  cursor: pointer;
+
+}
+
+
+.seeAll-Project{
+color: #ffff;
+
+color: #FFF;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 21px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+
+margin-left: 10px;
+
+}

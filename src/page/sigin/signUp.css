@@ -44,7 +44,7 @@
     height: 60px;
   }
   
-  button {
+  .submit-btn{
     border-radius: 8.639px;
     background: var(
       --Gradient,

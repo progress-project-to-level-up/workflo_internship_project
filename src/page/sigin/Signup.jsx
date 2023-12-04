@@ -133,8 +133,8 @@ const Signup = () => {
                     minLength="7"
                   />
                 </div>
-                <div>
-                  <button type="submit"> {btnTitle}</button>
+                <div >
+                  <button className="submit-btn" type="submit"> {btnTitle}</button>
                 </div>
               </div>
             </form>
