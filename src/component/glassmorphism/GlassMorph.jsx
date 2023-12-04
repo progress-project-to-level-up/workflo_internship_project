@@ -3,6 +3,8 @@ import '../../component/glassmorphism/glassMorph.css'
 import Hambugger from '../../asset/svg/hambugger.svg'
 import cardOne from '../../asset/image/card1.jpg'
 import woman from '../../asset/image/woman.jpg'
+import HambuggerTiny from '../../asset/svg/hambuggertiny.svg'
+import mancole from '../../asset/image/mancole.jpg'
 
 
 
@@ -40,14 +42,15 @@ const GlassCards = () => {
 
         <div className='myGlass3'>
             <div className='imageHolder3'>
-                <img src={woman} alt="" />
+                <img src={mancole} alt="" />
             </div>
             <div className='textHolder'>
-                <div className='threeDots'>
-                    <img src={Hambugger} alt="" />
+                <div className='threeDots3'>
+                    <img src={HambuggerTiny} alt="" />
                 </div>
-                <h3>Bolatito Nicole</h3>
-                <p>Sponsor</p>
+                <h3 className='smallH3'>Chinedu Okafor</h3>
+                
+                <p>Product Manager</p>
             </div>
 
 
