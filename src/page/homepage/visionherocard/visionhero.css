@@ -1,0 +1,53 @@
+
+
+.visionCard-container{
+
+
+    width: 100%;
+    background: #FAAC20;
+
+    height: 414px;
+
+
+    margin-top: 50px;
+}
+
+.vision-Text{
+display: flex;
+flex-direction: column;
+
+margin-top: 150px;
+}
+
+
+.visoin-details{
+display: flex;
+justify-content: space-between;
+
+margin: 0px 100px 0px 180px;
+}
+
+
+.workflow-text{
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+
+.explore-text{
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+.visionImage{
+    margin-top: -83px;
+}

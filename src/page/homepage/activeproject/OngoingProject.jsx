@@ -3,7 +3,10 @@ import ActiveProjectCard from "./ActiveProjectCard";
 import PictureCard1 from "../../../asset/svg/picturecard1.svg";
 import pictureCard2 from "../../../asset/svg/picturecard2.svg";
 import pictureCard3 from "../../../asset/svg/picturecard3.svg";
+
+import FolderIcon from "../../../asset/svg/folderIcon.svg";
 import "../../homepage/activeproject/activeproject.css";
+import { Link } from "react-router-dom";
 
 const OngoingProject = () => {
   return (
@@ -12,7 +15,6 @@ const OngoingProject = () => {
         <div className="active-project-text">
           <h1>Active Project</h1>
           <div className="main-card-container">
-
             <ActiveProjectCard
               projectImage={PictureCard1}
               projectName="Elaxar"
@@ -35,6 +37,13 @@ const OngoingProject = () => {
               backend Engineers.. "
             />
           </div>
+
+          <Link to="viewAllProject">
+            <div className="seeProject-btn">
+              <img src={FolderIcon} alt="Foldericon" />
+              <span className="seeAll-Project">See All Projects</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
