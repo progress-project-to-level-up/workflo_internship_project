@@ -1,0 +1,10 @@
+.bid-project{
+    border-radius: 10px;
+    background: #FFF;
+    width: 117px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    color: blue; 
+    border: none;
+}
