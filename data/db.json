@@ -1,0 +1,47 @@
+{
+    "project": [
+      {
+        "id": 1,
+        "title": "Project A Title",
+        "image": "src/asset/image/card1.jpg",
+        "status": "In Progress",
+        "description": "Detailed description for Project A",
+        "rolesNeed": ["Developer", "QA Engineer", "DevOps Engineer"]
+      },
+      {
+        "id": 2,
+        "title": "Project B Title",
+        "image": "src/asset/image/smillinguy.png",
+        "status": "Completed",
+        "description": "Detailed description for Project B",
+        "rolesNeed": ["UI/UX Designer", "Backend Developer", "Database Administrator"]
+      },
+      {
+        "id": 3,
+        "title": "Project C Title",
+        "image": "src/asset/image/woman.jpg",
+        "status": "Pending",
+        "description": "Detailed description for Project C",
+        "rolesNeed": ["Frontend Developer", "Security Analyst", "Cloud Architect"]
+      },
+      {
+        "id": 4,
+        "name": "Project D",
+        "title": "Project D Title",
+        "image": "src/asset/image/man.jpg",
+        "status": "In Progress",
+        "description": "Detailed description for Project D",
+        "rolesNeed": ["Data Scientist", "Machine Learning Engineer", "AI Specialist"]
+      },
+      {
+        "id": 5,
+        "title": "Project E Title",
+        "image": "src/asset/image/creatorphoto.jpg",
+        "status": "Completed",
+        "description": "Detailed description for Project E",
+        "rolesNeed": ["Mobile App Developer", "Network Engineer", "System Administrator"]
+      }
+    
+    ]
+  }
+  

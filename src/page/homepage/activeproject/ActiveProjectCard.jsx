@@ -2,6 +2,7 @@ import React from 'react'
 import '../../homepage/activeproject/activeproject.css'
 import BidButton from '../../../component/buttons/BidButton'
 
+
 const ActiveProjectCard = (props) => {
   return (
      <div className='active-project-container'>
@@ -15,7 +16,11 @@ const ActiveProjectCard = (props) => {
            <p className='role-need'>Role Needed</p>
            <p className='description'>{props.roleDescription}</p>
          </div>
-       <BidButton />
+       
+     
+       <button className='active-btn' >Bid to join</button>
+     
+
      </div>
    </div>
   )
