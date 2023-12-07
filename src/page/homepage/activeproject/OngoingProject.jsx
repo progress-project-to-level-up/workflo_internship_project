@@ -3,21 +3,22 @@ import ActiveProjectCard from "./ActiveProjectCard";
 import PictureCard1 from "../../../asset/svg/picturecard1.svg";
 import pictureCard2 from "../../../asset/svg/picturecard2.svg";
 import pictureCard3 from "../../../asset/svg/picturecard3.svg";
+
+import FolderIcon from "../../../asset/svg/projectsbtnicon.svg";
 import "../../homepage/activeproject/activeproject.css";
+import { Link } from "react-router-dom";
 
 const OngoingProject = () => {
   return (
-    <div>
       <div className="main-project-container">
         <div className="active-project-text">
-          <h1>Active Project</h1>
+          <h1>Active Projects</h1>
           <div className="main-card-container">
-
             <ActiveProjectCard
               projectImage={PictureCard1}
               projectName="Elaxar"
               projectDescription="Elaxar is an augmented reality web application\n that allows user experience art in 'real' or physical\n world — it imposes digital data onto realistic view."
-              roleDescription="Mobile App Developer, Writer\n 
+              roleDescription="Mobile App Developer, Writer, 
             Technical Director(Dev), Researcher"
             />
             <ActiveProjectCard
@@ -35,9 +36,15 @@ const OngoingProject = () => {
               backend Engineers.. "
             />
           </div>
+
+          <Link to="viewAllProject" className="viewLink">
+            <div className="seeProject-btn">
+              <img src={FolderIcon} alt="Foldericon" />
+              <span className="seeAll-Project">See All Projects</span>
+            </div>
+          </Link>
         </div>
       </div>
-    </div>
   );
 };
 export default OngoingProject;
