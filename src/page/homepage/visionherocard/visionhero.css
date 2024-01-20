@@ -1,53 +1,63 @@
-
-
-.visionCard-container{
-
-
+.visionCard-container {
     width: 100%;
-    background: #FAAC20;
-
     height: 414px;
-
-
-    margin-top: 50px;
+    background: #FAAC20;
+    padding: 0 3.5rem;
 }
 
-.vision-Text{
-display: flex;
-flex-direction: column;
-
-margin-top: 150px;
+.vision-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.visoin-details{
-display: flex;
-justify-content: space-between;
-
-margin: 0px 100px 0px 180px;
+.vision-Text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-.workflow-text{
+.workflow-text {
     color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
+    font-size: 39px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-
-.explore-text{
+.explore-text {
     color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
-    margin-top: 10px;
 }
 
-.visionImage{
-    margin-top: -83px;
+.visionImage {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.visionImage img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .visionCard-container {
+        height: 300px;
+        padding: 3rem 30px;
+    }
+
+    .vision-Text {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .visionImage {
+        display: none;
+    }
 }

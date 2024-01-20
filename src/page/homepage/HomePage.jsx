@@ -6,7 +6,8 @@ import OngoingProject from "./activeproject/OngoingProject";
 import VisionHeroCard from "./visionherocard/VisionHeroCard";
 import ContributorCard from "./ContributorCard/ContributorCard";
 import SponsorCard from "./SponsorCard/SponsorCard";
-import Footer from "./Footer/Footer";
+import Footer from "../../component/Footer/Footer";
+
 
 
 const HomePage = () => {
