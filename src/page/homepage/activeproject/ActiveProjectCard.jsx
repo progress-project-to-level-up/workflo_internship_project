@@ -5,24 +5,32 @@ import BidButton from '../../../component/buttons/BidButton'
 
 const ActiveProjectCard = (props) => {
   return (
-     <div className='active-project-container'>
-     <img className='image-project' src={props.projectImage} alt="active project" />
-     <div className='project-details'>
-       <h3 className='project-name'>{props.projectName}</h3>
-       <p className='project-description'>{props.projectDescription}</p>
-     </div>
-     <div className='role-container'>
-         <div >
-           <p className='role-need'>Role Needed</p>
-           <p className='description'>{props.roleDescription}</p>
-         </div>
-       
-     
-       <button className='active-btn' >Bid to join</button>
-     
-
-     </div>
-   </div>
+    <div className='active-project-container'>
+      <div className="active-img">
+        <img src={props.projectImage} alt="" />
+      </div>
+      
+      <div className="active-card-container">
+        <div className="active-project-summary">
+          <div className="active-desc">
+            <h3>{props.projectName}</h3>
+            <h5>{props.projectTitle}</h5>
+            <p>{props.projectDescription}</p>
+          </div>
+          <div className="active-role">
+            <div className="role-need">
+              <h3>Roles needed</h3>
+              <p>
+                {props.projectRole}
+              </p>
+            </div>
+            <div className="role-btn">
+              <button>Bid To Join</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
