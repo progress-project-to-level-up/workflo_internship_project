@@ -69,83 +69,42 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <div className="signup">
-        <div className="image-signup-txt">
-          <div className="drinking-cofee-img">
-            <img src={cofeeImage} alt="" />
+    <div className="form-sign">
+      <div className="form-cont">
+        <div className="form-img">
+          <img src={cofeeImage} alt="" />
+        </div>
+        <div className="form-main">
+          <div className="form-header">
+            <h3>Sign up</h3>
+            <p>Let's get you to the moon...</p>
           </div>
-          <div className="signup-container">
-              <h1>Sign Up</h1>
-              <p>Lets get your project done</p>
-            <form onSubmit={handleRegister}>
-              <div className="formInput">
-                <div>
-                  <input
-                    type="text"
-                    name="firstName"
-                    onChange={handleInputChange}
-                    placeholder="First Name"
-                    required
-                    autoComplete="off"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="text"
-                    name="lastName"
-                    onChange={handleInputChange}
-                    placeholder="Last Name"
-                    required
-                    autoComplete="off"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="text"
-                    name="email"
-                    onChange={handleInputChange}
-                    placeholder="Email"
-                    required
-                    autoComplete="off"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    name="phoneNumber"
-                    onChange={handleInputChange}
-                    placeholder="PhoneNumber"
-                    required
-                    minLength="11"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="password"
-                    name="password"
-                    onChange={handleInputChange}
-                    placeholder="Password"
-                    required
-                    minLength="7"
-                  />
-                </div>
-                <div>
-                  <button className="signupbutton" type="submit"> {btnTitle}</button>
-                </div>
+          <form action="" className="form-frm">
+            <div className="frm-sign-inputs">
+              <div className="frm-sign-ctrl">
+                <input type="text" placeholder="First Name" />
               </div>
-            </form>
-
-          <div className="sign-up-texted">
-            <p>Already have an account? </p>
-            <Link to='/login'>            
-              <p id="sign-up-text"> Sign in</p>  
-            </Link>         
-          </div>
-
-          </div>
+              <div className="frm-sign-ctrl">
+                <input type="text" placeholder="Last Name" />
+              </div>
+              <div className="frm-sign-ctrl">
+                <input type="email" placeholder="Email"/>
+              </div>
+              <div className="frm-sign-ctrl">
+                <input type="password" placeholder="Password"/>
+              </div>
+              <div className="frm-sign-ctrl">
+                <input type="password" placeholder="Confirm Password"/>
+              </div>
+            </div>
+            <div className="frm-btn">
+              <button>Sign up</button>
+            </div>
+            <div className="frm-already">
+              <span>Already have an account ?</span>
+              <Link to='/login'>Signin here</Link>
+            </div>
+          </form>
         </div>
       </div>
     </div>
