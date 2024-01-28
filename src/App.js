@@ -8,6 +8,7 @@ import OnboardPage from "./page/onboardingPage";
 import ForgetPassword from "./page/forgetPassword/ForgetPassword";
 import RestPassword from "./page/resetPassword/ResetPassword";
 import VerificationCode from "./page/verificationCode/VerificationCode";
+import CreateVacancyMain from "./page/createVacancy";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="forgetPassword" element={<ForgetPassword />} />
         <Route path="restPassword" element={<RestPassword/>} />
         <Route path="verification" element={<VerificationCode />} />
+        <Route path="createVacancy" element={<CreateVacancyMain />} />
       </Routes>
     </div>
   );
