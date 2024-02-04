@@ -118,7 +118,6 @@
     background: #F4F6F8;
     color: #B1B1B1;
     font-weight: 500;
-    font-weight: 500;
 }
 
 .frm-ctrl textarea {
@@ -169,4 +168,38 @@
 
 .create-collaborators button {
     width: 300px !important;
+}
+
+@media (max-width: 575px) {
+    .createProject {
+        padding: 3.5rem 30px;
+    }
+
+    .create-project-cont {
+        grid-template-columns: 12fr;
+        row-gap: 30px;
+    }
+
+    .create-add-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 428px) {
+    .attach-text span {
+        font-size: 14px;
+    }
+    .create-form-save,
+    .create-form-submit {
+        width: 50%;
+    }
+
+    .create-form-save button,
+    .create-form-submit button {
+        width: 100%;
+    }
+
+    .create-collaborators button {
+        width: 100% !important;
+    }
 }

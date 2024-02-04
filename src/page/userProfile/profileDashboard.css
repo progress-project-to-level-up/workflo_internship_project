@@ -1,0 +1,215 @@
+.user-profile {
+    width: 100%;
+    height: 100%;
+    background: #F4F6F8;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.05);
+}
+
+.user-pro-details,
+.project-made,
+.profile-and-projects,
+.user-pro-search {
+    display: flex;
+    align-items: center;
+}
+
+.user-pro-details {
+    width: 100%;
+    padding: 4rem 3.5rem;
+    justify-content: space-between;
+}
+
+.user-pro-name h3 {
+    color: #CA33F8;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.user-pro-search {
+    column-gap: 10px;
+    padding: 5px;
+    border-radius: 13px;
+    background: #FFF;
+    width: 390px;
+}
+
+.user-pro-search img {
+    width: 36px;
+    height: 35px;
+    color: #ecafff
+}
+
+.user-pro-search input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: inherit;
+    color: #B1B1B1;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.project-made {
+    width: 100%;
+    padding: 0 3.5rem;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+.project-joined,
+.project-created,
+.project-funded {
+    width: 100%;
+}
+
+.pro-title {
+    width: 100%;
+    text-align: start;
+}
+
+.pro-title h3 {
+    color: #1F1F1F;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pro-join-list {
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.view-pro-join {
+    width: 100%;
+    padding: 20px;
+}
+
+.view-pro-join.height {
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.view-pro-join.height::-webkit-scrollbar-track {
+    padding: 2px 4px;
+    background-color: #F4F6F8;
+    border-radius: 5px;
+}
+
+.view-pro-join.height::-webkit-scrollbar {
+    width: 8px;
+}
+
+.view-pro-join.height::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(253, 91, 253);
+}
+
+.list-pro {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.list-project-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.no-join {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1F1F1F;
+}
+
+.join-pro-btn {
+    width: 100%;
+    padding: 10px 20px 30px;
+    text-align: center;
+}
+
+.join-pro-btn button {
+    width: 250px;
+    height: 50px;
+    border-radius: 8.639px;
+    border: 2px solid #CA33F8;
+    background: #FFF;
+    box-shadow: 0px 2.16px 10.799px 0px #ECF1F4;
+    color: #CA33F8;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.profile-and-projects {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 30px 3.5rem 6rem;
+}
+
+.profile-and-projects button {
+    width: 200px;
+    height: 45px;
+    border-radius: 8.639px;
+    border: 2px solid #CA33F8;
+    background: #FFF;
+    box-shadow: 0px 2.16px 10.799px 0px #ECF1F4;
+    color: #CA33F8;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.profile-and-projects button:last-child {
+    background: var(--Gradient, linear-gradient(180deg, #F733F8 0%, #2F31C8 100%));
+    color: aliceblue;
+    border: none;
+}
+
+@media (max-width: 575px) {
+    .user-pro-details {
+        padding: 4rem 30px;
+    }
+
+    .user-pro-name h3 {
+        font-size: 23px;
+    }
+
+    .user-pro-search {
+        width: 300px;
+    }
+
+    .project-made {
+        padding: 0 30px;
+    }
+
+    .list-pro {
+        grid-template-columns: 6fr 6fr;
+    }
+}
+
+@media (max-width: 525px) {
+    .view-pro-join {
+        height: 500px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .list-pro {
+        grid-template-columns: 12fr;
+    }
+}

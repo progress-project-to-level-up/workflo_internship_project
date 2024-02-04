@@ -1,0 +1,78 @@
+.portfolio-links {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.port-head {
+    margin-bottom: 10px;
+}
+
+.port-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.port-ctrl {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 8.639px;
+    background: #F4F6F8;
+    color: #B1B1B1;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.port-icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #000000;
+    font-size: 20px;
+}
+
+.port-txt {
+    width: 100%;
+    height: 100%;
+}
+
+.port-txt input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8.639px;
+    background: #F4F6F8;
+    color: #B1B1B1;
+    font-weight: 500;
+}
+
+.delete-detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.delete-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.delete-btn button {
+    width: 300px;
+    height: 50px;
+    border-radius: 8.639px;
+    border: none;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border: 2px solid #CA33F8;
+    background: #FFF;
+    box-shadow: 0px 2.16px 10.799px 0px #ECF1F4;
+    color: #CA33F8;
+}

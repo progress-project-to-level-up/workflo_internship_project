@@ -38,8 +38,8 @@ const Login = () => {
         </div>
         <div className="form-main">
           <div className="form-header">
-            <h3>Sign up</h3>
-            <p>Let's get you to the moon...</p>
+            <h3>Welcom Back,</h3>
+            <p>Please login to continue ..</p>
           </div>
           <form action="" className="form-frm">
             <div className="frm-sign-inputs">

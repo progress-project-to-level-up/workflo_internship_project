@@ -3,7 +3,7 @@ import searchIcon from '../../asset/svg/searchIcon.svg';
 import logo from "../../asset/image/workflo.png";
 import "../navbar/Nav.css";
 import dropDown from "../../asset/svg/dropdown.svg";
-import { useLocation, NavLink } from 'react-router-dom';
+import { useLocation, NavLink, Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Navbar = () => {
@@ -20,9 +20,9 @@ export const Navbar = () => {
     <>
       <nav className='navbar'>
         <div className="logAndSearch">
-          <div className="navLogo">
+          <Link to='/' className="navLogo">
             <img src={logo} alt="" />
-          </div>
+          </Link>
           <div className="navSearch">
             <img src={searchIcon} alt="" />
             <input type="text" placeholder='Search for people, projects..' />
@@ -30,6 +30,10 @@ export const Navbar = () => {
         </div>
 
         <div className={openSidebar ? "navList active" : "navList"}>
+        <div className="navSide">
+            <img src={searchIcon} alt="" />
+            <input type="text" placeholder='Search for people, projects..' />
+          </div>
           <ul className="contList">
             <li>
               <NavLink to='/'>

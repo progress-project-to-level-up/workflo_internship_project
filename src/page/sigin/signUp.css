@@ -139,3 +139,22 @@
   letter-spacing: -1.074px;
   text-decoration-line: underline;
 }
+
+@media (max-width: 575px) {
+  .form-sign {
+    padding: 4rem 30px;
+  }
+
+  .form-cont {
+    width: 400px;
+    border-radius: 30px;
+  }
+
+  .form-img {
+    display: none;
+  }
+
+  .form-main {
+    width: 100%;
+  }
+}
