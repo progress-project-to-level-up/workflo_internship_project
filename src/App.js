@@ -9,6 +9,11 @@ import ProjectMain from "./page/projectpage/ProjectMain";
 import ProjectSide from "./page/projectpage/ProjectSide";
 import ProfilePage from "./page/profilePage";
 import EditProjectPage from "./page/editProject";
+import ForgetPassword from "./page/forgetPassword/ForgetPassword";
+import RestPassword from "./page/resetPassword/ResetPassword";
+import VerificationCode from "./page/verificationCode/VerificationCode";
+import CreateVacancyMain from "./page/createVacancy";
+
 
 function App() {
   return (
@@ -25,6 +30,10 @@ function App() {
         </Route>
         <Route path="profile" element={<ProfilePage />} />
         <Route path="edit-project" element={<EditProjectPage />} />
+        <Route path="forgetPassword" element={<ForgetPassword />} />
+        <Route path="restPassword" element={<RestPassword/>} />
+        <Route path="verification" element={<VerificationCode />} />
+        <Route path="createVacancy" element={<CreateVacancyMain />} />
       </Routes>
     </div>
   );
