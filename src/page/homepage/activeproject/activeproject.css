@@ -1,175 +1,111 @@
 .main-project-container {
-  background-color: #f5f7f9;
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 600px;
-
-    /* padding: 10px 30px 20px 100px; */
-
-    /* margin-left: 200px; */
-
-    /* width: 100%; */
-
-  /* margin-left: -200px; */
+  padding: 4.5rem 3.5rem;
+  background: #F5F7F9;
 }
 
-.active-project-container {
-  background: var(
-    --Gradient,
-    linear-gradient(180deg, #f733f8 0%, #2f31c8 100%)
-  );
-  width: fit-content;
-  color: #ffff;
-  width: 25%;
-  border-radius: 10px;
-
-  /* margin-left: 200px; */
-}
-
-.active-project-text{
-  height: 550px;
-  width:auto;
-  padding-bottom: 50px;
-}
-
-.active-project-text h1 {
-  color: #1f1f1f;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  text-transform: capitalize;  
-  margin-left: 140px;
-}
-
-.role-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 15px;
-
-}
-.image-project {
-  width: auto;
-  border-radius: 10px;
-}
-.project-name {
-  margin-top: 0;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-}
-.role-need {
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-}
-.description {
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: capitalize;
-}
-.project-details {
-  padding: 0px 15px;
-}
-.project-description {
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .main-card-container {
   display: flex;
   align-items: center;
-  gap: 50px;
-  width: fit-content;
-  margin: auto;
-  justify-content: center;
-
-
+  justify-content: space-between;
 }
 
-
-
-
-.active-btn{
-background-color: antiquewhite;
-
-width: 120px;
-height: 40px;
-
-border-radius: 10px;
-background: #FFF;
-
-border: none;
-color: #2F31C8;
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 12px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-text-transform: capitalize;
-
-
-
-cursor: pointer;
-
-}
-
-
-
-
-.seeProject-btn{
-  margin-top: 20px;
-  width: 210px;
-  height: 50px;  
+.active-project-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 360px;
+  margin-top: 2rem;
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.active-img,
+.active-img img {
+  width: 100%;
+  height: 220px;
+}
+
+.active-img img {
+  object-fit: cover;
+}
+
+.active-card-container {
+  width: 100%;
+  padding: 10px 15px;
   background: var(--Gradient, linear-gradient(180deg, #F733F8 0%, #2F31C8 100%));
-  cursor: pointer;
-  justify-content: center;
-  margin-left: 140px;
-  padding: none;
-
-
+  color: #ffffff;
 }
 
-
-
-
-.seeAll-Project{
-color: #FFF;
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 18px;
-font-style: none;
-text-decoration: none;
-font-weight: 700;
-margin-left: 10px;
-
+.active-project-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
 
-.viewLink{
-  text-decoration: none;
-  width: 210px;
-  padding: none;
+.active-desc h3 {
+  font-size: 22px;
+}
+
+.active-desc h5 {
+  font-size: 16px;
+}
+
+.active-desc p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.active-role {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto !important;
+}
+
+.role-need {
+  width: 65%;
+}
+
+.role-need h3 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.role-need p {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.role-btn {
+  width: 35%;
+}
+
+.role-btn button {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #FFF;
+  color: #2F31C8;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 575px) {
+  .main-project-container {
+    padding: 3rem 30px;
+  }
+
+  .main-card-container {
+    flex-direction: column;
+    row-gap: 15px;
+    width: 100%;
+  }
+
+  .active-project-container {
+    width: 100%;
+  } 
 }

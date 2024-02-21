@@ -31,40 +31,42 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="log-container">
-        <div className="image2-container">
-          <img src={loginPhoto} alt="image2" className="image2" />
+    <div className="form-sign">
+      <div className="form-cont">
+        <div className="form-img">
+          <img src={loginPhoto} alt="" />
         </div>
-
-        <div className="text-container">
-          <h1 className="title-text">Welcome back,</h1>
-          <p className="sub-text">Please sign in to continue</p>
-
-          <form onSubmit={handleLogin}>
-            <div className="loginInput-form">
-              <div>
-                <input type="text" placeholder="Email" ref={email} rereeddd />
+        <div className="form-main">
+          <div className="form-header">
+            <h3>Welcom Back,</h3>
+            <p>Please login to continue ..</p>
+          </div>
+          <form action="" className="form-frm">
+            <div className="frm-sign-inputs">
+              <div className="frm-sign-ctrl">
+                <input type="email" placeholder="Email"/>
               </div>
-              <div>
-                <input type="text" placeholder="Password" ref={password} />
+              <div className="frm-sign-ctrl">
+                <input type="password" placeholder="Password"/>
               </div>
             </div>
-            <div className="check-flex">
-              <input type="checkbox" className="check" />
-              <div className="remember">Remember me</div>
-              <div className="forget">Forgot password?</div>
+            <div className="frm-pwd-crd">
+              <div className="frm-pwd-ctrl">
+                <input type="checkbox" name="" id="" />
+                <label htmlFor="">Remember me</label>
+              </div>
+              <div className="frm-forget">
+                <span>Forgot Password ?</span>
+              </div>
             </div>
-            <div className="btn-flex">
-              <button className="signinbutton">Sign In </button>
+            <div className="frm-btn">
+              <button>Sign in</button>
+            </div>
+            <div className="frm-already">
+              <span>Don't have an account ?</span>
+              <Link to='/signup'>Signup here</Link>
             </div>
           </form>
-          <div className="sign-in">
-            <p>Don't have an account? </p>
-            <Link to='/sign'>
-              <p id="sign-in-text"> Sign up</p>
-            </Link>
-          </div>
         </div>
       </div>
     </div>

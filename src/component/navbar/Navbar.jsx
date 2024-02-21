@@ -1,42 +1,74 @@
-import React from 'react';
-import SearchIcon from '../../asset/svg/searchIcon.svg';
-import Logo from "../../asset/image/workflo.png";
-import Nav from "../navbar/Nav.css";
-import DropDown from "../../asset/svg/dropdown.svg";
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import searchIcon from '../../asset/svg/searchIcon.svg';
+import logo from "../../asset/image/workflo.png";
+import "../navbar/Nav.css";
+import dropDown from "../../asset/svg/dropdown.svg";
+import { useLocation, NavLink, Link } from 'react-router-dom';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
+  const [openSidebar, setOpenSidebar] = useState(false);
+
+  const handleSidebar = () => {
+    setOpenSidebar(!openSidebar);
+  };
+
   return (
     <>
-    {isHomePage && (
-      <div className='NavBar-container'>
-        <div className="logo-container">
-          <img src={Logo} alt="logo brand" className='logo' />  
-          <div className='Input-bar'>
-            <img src={SearchIcon} alt="searchIcon"  className='search-icon'/>
-            <input id='search-text' type="text" placeholder='Search for people, projects'  />
+      <nav className='navbar'>
+        <div className="logAndSearch">
+          <Link to='/' className="navLogo">
+            <img src={logo} alt="" />
+          </Link>
+          <div className="navSearch">
+            <img src={searchIcon} alt="" />
+            <input type="text" placeholder='Search for people, projects..' />
           </div>
         </div>
 
-        <nav className="projectHeader">
-          <ul className='menu'>
-            <li className='project'>Home</li>
-            <li className='project icons'>Projects <img src={DropDown} alt='dropdown' className='drop-icon' /> </li>
-            <li className='project icons'>Discovery <img src={DropDown} alt='dropdown' className='drop-icon' /> </li>
+        <div className={openSidebar ? "navList active" : "navList"}>
+        <div className="navSide">
+            <img src={searchIcon} alt="" />
+            <input type="text" placeholder='Search for people, projects..' />
+          </div>
+          <ul className="contList">
+            <li>
+              <NavLink to='/'>
+                <span>Home</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/projects'>
+                <span>Projects</span>
+                <img src={dropDown} alt="" />
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/discover'>
+                <span>Discover</span>
+                <img src={dropDown} alt="" />
+              </NavLink>
+            </li>
           </ul>
-        </nav>
-
-        <div className='btn'>
-          <Link to='/login'>          
-            <button className='btn-login'>Login</button>
-          </Link>
-          <button className='btn-project'>Join a Project</button>
+          <div className="listBtns">
+            <div className="logBtn">
+              <button>Login</button>
+            </div>
+            <div className="joinPro">
+              <button>Join a Project</button>
+            </div>
+          </div>
         </div>
-      </div>
-    )}
+
+        <div className="navBurger" onClick={handleSidebar}>
+          <GiHamburgerMenu className='burger' />
+        </div>
+
+        <div className={openSidebar ? "placeHolder active" : "placeHolder"} onClick={handleSidebar}></div>
+      </nav>
     </>
   );
 };
