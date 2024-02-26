@@ -94,6 +94,28 @@
   font-weight: 800;
 }
 
+.viewLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  width: 200px;
+  height: 45px;
+  margin-top: 3rem;
+  text-decoration: none;
+  border-radius: 10px;
+  background: var(--Gradient, linear-gradient(180deg, #F733F8 0%, #2F31C8 100%));
+  color: #ffffff;
+}
+
+.folder-icon {
+  font-size: 25px;
+}
+
+.viewLink span {
+  font-weight: 600;
+}
+
 @media (max-width: 575px) {
   .main-project-container {
     padding: 3rem 30px;

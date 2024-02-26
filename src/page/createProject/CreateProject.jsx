@@ -1,9 +1,78 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './createProject.css';
+import { useNavigate } from 'react-router-dom';
+import { animateScroll as scroll } from "react-scroll";
 import { CgAttachment } from "react-icons/cg";
 import { IoIosArrowDown } from "react-icons/io";
+import { useDispatch } from 'react-redux';
+import { createProject } from '../../store/projectBuild/createProSlice';
+import { toast } from 'react-toastify';
 
 function CreateProject() {
+    // scroll to page after each navigation
+    useEffect(() => {
+        scroll.scrollToTop({
+            duration: 1000,
+            smooth: 'easeInOutQuint',
+        });
+    }, []);
+
+    // navigation
+    const navigate = useNavigate();
+
+    // dispatch function
+    const dispatch = useDispatch();
+
+    const proCat = ['E-commerce', 'Shopify', 'Mobile App', 'Web3', 'Block Chain'];
+
+    const roleNeed =  ['Frontend Developer', 'Backend Developer', 'UI/UX Designer', 'Web3 Developer', 'Block Chain Developer'];
+
+    // getting the project data
+    const [createPro, setCreatePro] = useState({
+        projectName: '',
+        projectCategory: '',
+        rolesNeeded: '',
+        projectStage: '',
+        projectSummary: '',
+        projectDesc: ''
+    });
+
+    // setting error message
+    const [error, setError] = useState({});
+
+    // validating the project
+    const validateProject = () => {
+        const newErrors = {};
+
+        if(!createPro.projectName.trim()) {
+            newErrors.projectName = 'Project name is required';
+        }
+        else if(createPro.projectName.length < 3) {
+            newErrors.projectName = 'Project name must be at least 3 characters';
+        }
+
+        setError(newErrors);
+        return Object.keys(newErrors).length === 0;
+    }
+
+    // handling project submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if(validateProject()) {
+            dispatch(createProject(createPro));
+            toast.success('You\'ve successfully created a project')
+        }
+    }
+
+    // handling onChange value for inputs
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setCreatePro({
+            ...createPro, [name]: value
+        })
+    }
+
     return (
         <div className='createProject'>
             <div className="create-project-head">

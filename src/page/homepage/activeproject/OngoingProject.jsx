@@ -3,7 +3,7 @@ import ActiveProjectCard from "./ActiveProjectCard";
 import PictureCard1 from "../../../asset/svg/picturecard1.png";
 import pictureCard2 from "../../../asset/svg/picturecard2.png";
 import pictureCard3 from "../../../asset/svg/peer-pea.png";
-
+import { FaRegFolder } from "react-icons/fa6";
 import FolderIcon from "../../../asset/svg/projectsbtnicon.svg";
 import "../../homepage/activeproject/activeproject.css";
 import { Link } from "react-router-dom";
@@ -48,21 +48,19 @@ const OngoingProject = () => {
           {
             projectCard.map((project, ind) => (
               <ActiveProjectCard
-              projectImage={project.img}
-              projectName={project.proName}
-              projectTitle={project.proTitle}
-              projectDescription={project.proDesc}
-              projectRole={project.proRole}
-            />
+                projectImage={project.img}
+                projectName={project.proName}
+                projectTitle={project.proTitle}
+                projectDescription={project.proDesc}
+                projectRole={project.proRole}
+              />
             ))
           }
         </div>
 
-        <Link to="viewAllProject" className="viewLink">
-          <div className="seeProject-btn">
-            <img src={FolderIcon} alt="Foldericon" />
-            <span className="seeAll-Project">See All Projects</span>
-          </div>
+        <Link to="/projects" className="viewLink">
+          <FaRegFolder className="folder-icon"/>
+          <span className="seeAll-Project">See All Projects</span>
         </Link>
       </div>
     </div>

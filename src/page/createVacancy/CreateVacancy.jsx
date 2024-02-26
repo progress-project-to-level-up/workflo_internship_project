@@ -40,13 +40,14 @@ function CreateVacancy() {
                   <option value="">Porfolio</option>
                 </select>
               </div>
-              <div className="frm-ctrl ">
-               <div className="input-ctrl">
-               <input name="" id="" placeholder="External Links" />
-                 <GoPlus />
-               </div>
-               
-               </div>
+              <div className="port-ctrl">
+                <div className="port-txt">
+                  <input type="url" placeholder='External links' />
+                </div>
+                <div className="port-icon">
+                  <GoPlus />
+                </div>
+              </div>
               <div className="frm-ctrl">
                 <textarea
                   name=""
@@ -72,13 +73,11 @@ function CreateVacancy() {
           <form action="" className="create-add-team">
             <div className="team-collection">
               <div className="frm-ctrl">
-                <select type="text" placeholder="Invite Collaborators" > 
-                <option value="">Invite Collaborators</option>
-                </select>
+                <input type="text" placeholder='Invite Collaborators' />
               </div>
             </div>
             <div className="create-team-btns">
-              <div className="create-bid-collaborators">
+              <div className="create-collaborators">
                 <button>Find Collaborators</button>
               </div>
             </div>

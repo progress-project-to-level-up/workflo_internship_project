@@ -17,7 +17,7 @@ function Onboarding() {
                     </div>
                     <div className="onboard-link-project">
                         <div className="link-onboard">
-                            <Link>
+                            <Link to='/create-project'>
                                 <span>Create Project</span>
                             </Link>
                             <Link>
@@ -28,7 +28,7 @@ function Onboarding() {
                             </Link>
                         </div>
                         <div className="view-project">
-                            <span>Or would you rather <Link>view projects ?</Link></span>
+                            <span>Or would you rather <Link to='/projects'>view projects ?</Link></span>
                         </div>
                     </div>
                 </div>

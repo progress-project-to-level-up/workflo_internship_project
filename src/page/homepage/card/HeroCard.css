@@ -40,6 +40,7 @@
     border: none;
     outline: none;
     margin-top: 2.5rem;
+    text-decoration: none;
 }
 
 .telegram-icon,
@@ -62,6 +63,8 @@
     font-size: 15.997px;
     font-style: normal;
     font-weight: 800;
+    background-color: #ffffff;
+    color: black;
 }
 
 .image-container {

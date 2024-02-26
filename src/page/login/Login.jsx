@@ -1,34 +1,75 @@
-import React, { useRef } from "react";
-import "../login/login.css";
 import loginPhoto from "../login/loginPhoto.jpg";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const email = useRef();
-  const password = useRef();
+  // Getting user
+  const profile = useSelector((state) => state.user.user);
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    const authDetails = {
-      email: email.current.value,
-      password: password.current.value,
-    };
-    try {
-      const apiResponse = await axios.post(
-        "http://localhost:8080/login",
-        authDetails,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log(apiResponse);
-    } catch (error) {
-      console.log(error);
+  // Handling navigation
+  const navigate = useNavigate();
+
+  // authenticating user credentials
+  const [logUser, setLogUser] = useState({
+    email: '',
+    password: ''
+  })
+
+  // Handling input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLogUser({
+      ...logUser, [name]: value
+    });
+  };
+
+  // setting error message
+  const [error, setError] = useState({});
+
+  // checking user input
+  const validateUser = () => {
+    const newErrors = {};
+    if (!logUser.email.trim()) {
+      newErrors.email = 'Email field is required';
+    }
+    else if (logUser.email !== profile.email) {
+      newErrors.email = 'Invalid email address'
+    }
+
+    if (!logUser.password.trim()) {
+      newErrors.password = 'Password field is required';
+    }
+    else if (logUser.password !== profile.password) {
+      newErrors.password = 'Invalid credentials';
+    }
+
+    setError(newErrors);
+    if (Object.keys(newErrors).length === 0) {
+      return true;
+    }
+    else {
+      return false;
     }
   };
+
+  // Logging in
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (!profile) {
+      toast.info('No account found');
+    }
+    else {
+      if (validateUser()) {
+        navigate("/onboard");
+        toast.success("Login Successful");
+      }
+    }
+  }
+
 
   return (
     <div className="form-sign">
@@ -41,13 +82,25 @@ const Login = () => {
             <h3>Welcom Back,</h3>
             <p>Please login to continue ..</p>
           </div>
-          <form action="" className="form-frm">
+          <form onSubmit={handleLogin} action="" className="form-frm">
             <div className="frm-sign-inputs">
               <div className="frm-sign-ctrl">
-                <input type="email" placeholder="Email"/>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  placeholder="Email"
+                />
+                {error.email && <span className="err-msg">{error.email}</span>}
               </div>
               <div className="frm-sign-ctrl">
-                <input type="password" placeholder="Password"/>
+                <input
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  placeholder="Password"
+                />
+                {error.password && <span className="err-msg">{error.password}</span>}
               </div>
             </div>
             <div className="frm-pwd-crd">
@@ -55,12 +108,12 @@ const Login = () => {
                 <input type="checkbox" name="" id="" />
                 <label htmlFor="">Remember me</label>
               </div>
-              <div className="frm-forget">
+              <Link to='forgotPassword' className="frm-forget">
                 <span>Forgot Password ?</span>
-              </div>
+              </Link>
             </div>
             <div className="frm-btn">
-              <button>Sign in</button>
+              <button type="submit">Sign in</button>
             </div>
             <div className="frm-already">
               <span>Don't have an account ?</span>

@@ -14,7 +14,8 @@
 .contList li a,
 .listBtns,
 .logBtn,
-.joinPro {
+.joinPro,
+.logBtn a, .joinPro a {
     display: flex;
     align-items: center;
 }
@@ -101,7 +102,12 @@
     font-size: 20px;
 }
 
-.logBtn button {
+.logBtn a, .joinPro a {
+    justify-content: center;
+}
+
+.logBtn a {
+    text-decoration: none;
     width: 117px;
     height: 45px;
     font-size: 18px;
@@ -116,7 +122,8 @@
 }
 
 
-.joinPro button {
+.joinPro a {
+    text-decoration: none;
     width: 163px;
     height: 45px;
     font-size: 18px;
@@ -126,6 +133,52 @@
     background: var(--Gradient, linear-gradient(180deg, #F733F8 0%, #2F31C8 100%));
     cursor: pointer;
     border: none;
+}
+
+.acctImg {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.user-img {
+    overflow: hidden;
+}
+
+.user-img, .user-img img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.acct-opt {
+    position: fixed;
+    top: 100px;
+    right: -100vw;
+    width: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #6c6c6c92;
+    border-radius: 20px 0 20px 20px;
+    transition: right .7s;
+}
+
+.acctImgCont:hover .acct-opt {
+    right: 4rem;
+}
+
+.acct-opt-list {
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: #6C6C6C;
+}
+
+.acct-opt-list span {
+    font-size: 14px;
 }
 
 .navBurger,
@@ -206,8 +259,8 @@
         width: 100%;
     }
 
-    .logBtn button,
-    .joinPro button {
+    .logBtn a,
+    .joinPro a {
         width: 100%;
     }
 

@@ -1,6 +1,6 @@
 .form-sign {
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem;
   align-items: center;
   justify-content: center;
   background: #FAFCFE;
@@ -77,6 +77,12 @@
   width: 100%;
 }
 
+.err-msg {
+  margin-top: 5px;
+  color: red;
+  font-size: 10px;
+}
+
 .frm-pwd-crd {
   width: 100%;
   justify-content: space-between;
@@ -95,6 +101,7 @@
 .frm-sign-ctrl input {
   width: 100%;
   height: 35px;
+  padding: 5px;
   border: none;
   border-bottom: 1px solid #cccccc;
   outline: none;
@@ -138,6 +145,11 @@
   color: #CA33F8;
   letter-spacing: -1.074px;
   text-decoration-line: underline;
+}
+
+.frm-forget {
+  text-decoration: none;
+  color: #B1B1B1;
 }
 
 @media (max-width: 575px) {

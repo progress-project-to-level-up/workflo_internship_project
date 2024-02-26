@@ -30,8 +30,8 @@ function App() {
         </Route>
         <Route path="profile" element={<ProfilePage />} />
         <Route path="edit-project" element={<EditProjectPage />} />
-        <Route path="forgetPassword" element={<ForgetPassword />} />
-        <Route path="restPassword" element={<RestPassword/>} />
+        <Route path="forgotPassword" element={<ForgetPassword />} />
+        <Route path="resetPassword" element={<RestPassword/>} />
         <Route path="verification" element={<VerificationCode />} />
         <Route path="createVacancy" element={<CreateVacancyMain />} />
       </Routes>
