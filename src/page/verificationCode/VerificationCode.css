@@ -1,0 +1,90 @@
+.pass-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6f8;
+  height: 100%;
+}
+
+.pass-img img {
+  width: 70%;
+}
+
+.pass-main {
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 42px;
+}
+
+.pass-frm {
+  width: 100%;
+  flex-direction: column;
+  row-gap: 32px;
+
+}
+
+.pass-head p {
+  margin-top: 10px;
+}
+
+.pass-head h3 {
+  color: #ca33f8;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.pass-head p {
+  color: #b1b1b1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.frm-verified-inputs {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 6fr 6fr 6fr 6fr;
+  margin-left: 13px;
+}
+
+.frm-verified-ctrl {
+  width: 58%;
+}
+
+.frm-verified-ctrl input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 8.639px;
+  background: #F4F6F8;
+  color: #B1B1B1;
+  font-weight: 500;
+  font-weight: 500;
+
+}
+
+.frm-verified-ctrl input::placeholder {
+  color: #B1B1B1;
+}
+
+.frm-verified {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.frm-verified span {
+  font-size: 14px;
+}
+
+.frm-verified a {
+  font-size: 14px;
+  font-weight: 800;
+  color: #CA33F8;
+  letter-spacing: -1.074px;
+  text-decoration-line: underline;
+}

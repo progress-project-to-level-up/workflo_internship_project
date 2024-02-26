@@ -3,19 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
-
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Provider } from 'react-redux';
+import { persistor, store } from './store/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-    <App />
-      <ToastContainer closeButton={false} autoClose={1000}/>
-   
-    </Router>
+    <PersistGate loading={null} persistor={persistor}>
+      <Provider store={store}>
+        <Router>
+          <App />
+          <ToastContainer closeButton={false} autoClose={1000} />
+        </Router>
+      </Provider>
+    </PersistGate>
   </React.StrictMode>
 );
 

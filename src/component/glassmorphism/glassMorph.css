@@ -1,160 +1,86 @@
+.glassHolder {
+    position: relative;
+}
 
-@import-normalize;
-
-.myGlass{
+.myGlass1,
+.myGlass2,
+.myGlass3 {
     display: flex;
-    position: absolute;
-    width: 292px;
-    height: 161px;
-    flex-shrink: 0;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-left: 350px;
+    flex-direction: column;
+    padding: 6px;
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.47);
-    background: radial-gradient(276.56% 104.32% at 5.34% 9.25%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.07) 40%);
+    background: radial-gradient(276.56% 104.32% at 1.34% 8.25%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.07) 100%);
     backdrop-filter: blur(6px);
-    overflow: hidden;
 }
 
-.myGlass2{
-    display: flex;
+.myGlass1 {
+    width: 190px;
+    height: fit-content;
     position: absolute;
-    width: 292px;
-    height: 161px;
-    flex-shrink: 0;
-    margin-top: 250px;
-    margin-left: 150px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.47);
-    background: radial-gradient(276.56% 104.32% at 5.34% 9.25%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.07) 40%);
-    backdrop-filter: blur(6px);
-    overflow: hidden;
+    bottom: 105px;
+    right: 420px;
+    z-index: 5;
 }
 
-.myGlass3{
-    display: flex;
+.myGlass2 {
     position: absolute;
-    width: 216px;
-    height: 119px;
-    flex-shrink: 0;
-    margin-top: 60px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.47);
-    background: radial-gradient(276.56% 104.32% at 5.34% 9.25%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.07) 40%);
-    backdrop-filter: blur(6px);
-    overflow: hidden;
+    bottom: 55px;
+    right: 190px;
+    z-index: 4;
 }
 
-
-.glassHolder{
-    display: flex;
+.myGlass3 {
     position: absolute;
-    align-items: center;
-    justify-content: start;
-    margin-left: 52%;
-    margin-top: 27%;
+    bottom: 170px;
+    right: 40px;
 }
 
-.imageHolder{
-    width: 115px;
-    height: 100px;
-    border-radius: 100%;
-    background-color:  aliceblue;
-    position:relative;
-    margin-left: 10px;
-
+.myGlass2,
+.myGlass3 {
+    width: 250px;
+    height: fit-content;
+    column-gap: 15px;
 }
 
-.threeDots{
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    margin-right: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.imageHolder img{
+.threeDots {
     width: 100%;
-    height: 100%;
-    object-fit:cover;
+    text-align: end;
+}
+
+.glassContent {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.imageHolder,
+.imageHolder img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
 }
 
-.textHolder{
-    color: white;
-    margin:0px;
-
+.imageHolder img {
+    object-fit: cover;
 }
 
-.textHolder h2{
-    margin-bottom: 5px;
-    margin-top: 0px;
-    font-size: 30px;
+.glasstxt h2 {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
 }
 
-.textHolder p{
-    margin-top: 0px;
-    font-size: small;
+.myGlass2 .glasstxt h2, .myGlass3 .glasstxt h2 {
+    width: 50px;
 }
 
-
-
-
-
-
-
-
-
-.imageHolder3{
-    width: 100px;
-    height: 75px;
-    border-radius: 100%;
-    background-color:  aliceblue;
-    position:relative;
-    margin-left: 10px;
-
-}
-
-.threeDots3{
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    margin-right: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.imageHolder3 img{
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-    border-radius: 100%;
-}
-
-.textHolder3{
-    color: white;
-    margin:0px;
-
-}
-
-.smallH3{
-    margin-bottom: 0px;
-    margin-top: 2px;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.textHolder3 p{
-    margin-top: 0px;
-    font-size: small;
+.glasstxt p {
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
 }

@@ -1,0 +1,67 @@
+.fund-icon {
+    font-size: 18px;
+    color: #000000;
+}
+
+.id-type {
+    width: 100%;
+    text-align: right;
+}
+
+.id-type span {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.tel-ctrl {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+}
+
+.create-frm-sponsors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.create-spon {
+    margin-top: 0 !important; 
+}
+
+.find-sponsor button {
+    width: 300px;
+    height: 50px;
+    border-radius: 8.639px;
+    border: none;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border: 2px solid #CA33F8;
+    background: #FFF;
+    box-shadow: 0px 2.16px 10.799px 0px #ECF1F4;
+    color: #CA33F8;
+}
+
+@media (max-width: 575px) {
+    .tel-ctrl {
+        grid-template-columns: 12fr;
+        row-gap: 20px;
+    }
+
+    .create-frm-sponsors {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .find-sponsor, .find-sponsor button {
+        width: 100%;
+    }
+
+    .delete-btn button {
+        width: 100%;
+    }
+}

@@ -1,13 +1,14 @@
-import React from 'react'
-import '../../component/buttons/projectbutton.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../../component/buttons/projectbutton.css';
 
 
 
 const ProjectButton = () => {
   return (
-    <div>
-        <button className='create-project'>Create Project</button>
-    </div>
+    <Link to='/create-project'>
+      <button className='create-project'>Create Project</button>
+    </Link>
   )
 }
 

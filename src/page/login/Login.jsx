@@ -1,70 +1,125 @@
-import React, { useRef } from "react";
-import "../login/login.css";
 import loginPhoto from "../login/loginPhoto.jpg";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const email = useRef();
-  const password = useRef();
+  // Getting user
+  const profile = useSelector((state) => state.user.user);
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    const authDetails = {
-      email: email.current.value,
-      password: password.current.value,
-    };
-    try {
-      const apiResponse = await axios.post(
-        "http://localhost:8080/login",
-        authDetails,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log(apiResponse);
-    } catch (error) {
-      console.log(error);
+  // Handling navigation
+  const navigate = useNavigate();
+
+  // authenticating user credentials
+  const [logUser, setLogUser] = useState({
+    email: '',
+    password: ''
+  })
+
+  // Handling input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLogUser({
+      ...logUser, [name]: value
+    });
+  };
+
+  // setting error message
+  const [error, setError] = useState({});
+
+  // checking user input
+  const validateUser = () => {
+    const newErrors = {};
+    if (!logUser.email.trim()) {
+      newErrors.email = 'Email field is required';
+    }
+    else if (logUser.email !== profile.email) {
+      newErrors.email = 'Invalid email address'
+    }
+
+    if (!logUser.password.trim()) {
+      newErrors.password = 'Password field is required';
+    }
+    else if (logUser.password !== profile.password) {
+      newErrors.password = 'Invalid credentials';
+    }
+
+    setError(newErrors);
+    if (Object.keys(newErrors).length === 0) {
+      return true;
+    }
+    else {
+      return false;
     }
   };
 
+  // Logging in
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (!profile) {
+      toast.info('No account found');
+    }
+    else {
+      if (validateUser()) {
+        navigate("/onboard");
+        toast.success("Login Successful");
+      }
+    }
+  }
+
+
   return (
-    <div className="login-container">
-      <div className="log-container">
-        <div className="image2-container">
-          <img src={loginPhoto} alt="image2" className="image2" />
+    <div className="form-sign">
+      <div className="form-cont">
+        <div className="form-img">
+          <img src={loginPhoto} alt="" />
         </div>
-
-        <div className="text-container">
-          <h1 className="title-text">Welcome back,</h1>
-          <p className="sub-text">Please sign in to continue</p>
-
-          <form onSubmit={handleLogin}>
-            <div className="loginInput-form">
-              <div>
-                <input type="text" placeholder="Email" ref={email} rereeddd />
+        <div className="form-main">
+          <div className="form-header">
+            <h3>Welcom Back,</h3>
+            <p>Please login to continue ..</p>
+          </div>
+          <form onSubmit={handleLogin} action="" className="form-frm">
+            <div className="frm-sign-inputs">
+              <div className="frm-sign-ctrl">
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  placeholder="Email"
+                />
+                {error.email && <span className="err-msg">{error.email}</span>}
               </div>
-              <div>
-                <input type="text" placeholder="Password" ref={password} />
+              <div className="frm-sign-ctrl">
+                <input
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  placeholder="Password"
+                />
+                {error.password && <span className="err-msg">{error.password}</span>}
               </div>
             </div>
-            <div className="check-flex">
-              <input type="checkbox" className="check" />
-              <div className="remember">Remember me</div>
-              <div className="forget">Forgot password?</div>
+            <div className="frm-pwd-crd">
+              <div className="frm-pwd-ctrl">
+                <input type="checkbox" name="" id="" />
+                <label htmlFor="">Remember me</label>
+              </div>
+              <Link to='forgotPassword' className="frm-forget">
+                <span>Forgot Password ?</span>
+              </Link>
             </div>
-            <div className="btn-flex">
-              <button className="signinbutton">Sign In </button>
+            <div className="frm-btn">
+              <button type="submit">Sign in</button>
+            </div>
+            <div className="frm-already">
+              <span>Don't have an account ?</span>
+              <Link to='/signup'>Signup here</Link>
             </div>
           </form>
-          <div className="sign-in">
-            <p>Don't have an account? </p>
-            <Link to='/sign'>
-              <p id="sign-in-text"> Sign up</p>
-            </Link>
-          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,205 @@
+.createProject {
+    padding: 3.5rem;
+    width: 100%;
+    background: #FAFCFE;
+}
+
+.create-project-head {
+    margin-bottom: 1rem;
+    color: #CA33F8;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.create-add-image,
+.create-form-project,
+.form-collection,
+.create-form-btns,
+.attach-media,
+.attach-text,
+.attach-drop-arrow {
+    display: flex;
+}
+
+.create-project-cont {
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    column-gap: 2rem;
+    width: 100%;
+}
+
+.create-add-image {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid #C4C6DE;
+    background: #EFEEF3;
+    padding: 30px;
+}
+
+.attach-media {
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+    background: #727CF5;
+    box-shadow: 0px 4px 15px 0px rgba(114, 124, 245, 0.30);
+    color: #ffffff;
+}
+
+.attach-text,
+.attach-drop-arrow {
+    padding: 10px;
+}
+
+.attach-text {
+    column-gap: 5px;
+    border-right: 1px solid #ffffff;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.attach-drop-arrow {
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.create-form-project {
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+}
+
+.max-file-info {
+    font-size: 14px;
+}
+
+.create-forms,
+.create-team-details {
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.create-form-head,
+.create-team-head {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.create-add-project-details,
+.form-collection {
+    width: 100%;
+}
+
+.form-collection {
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.frm-ctrl input,
+.frm-ctrl select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8.639px;
+    background: #F4F6F8;
+    color: #B1B1B1;
+    font-weight: 500;
+}
+
+.frm-ctrl textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8.639px;
+    background: #F4F6F8;
+    color: #B1B1B1;
+}
+
+.create-form-btns,
+.create-team-btns {
+    margin-top: 30px;
+    column-gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.create-form-save button,
+.create-form-submit button,
+.create-collaborators button {
+    width: 150px;
+    height: 50px;
+    border-radius: 8.639px;
+    border: none;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.create-form-save button,
+.create-collaborators button {
+    border: 2px solid #CA33F8;
+    background: #FFF;
+    box-shadow: 0px 2.16px 10.799px 0px #ECF1F4;
+    color: #CA33F8;
+}
+
+.create-form-submit button {
+    border-radius: 8.639px;
+    background: var(--Gradient, linear-gradient(180deg, #F733F8 0%, #2F31C8 100%));
+    box-shadow: 0px 2.16px 10.799px 0px #ECF1F4;
+    color: #ffffff;
+}
+
+.create-collaborators button {
+    width: 300px !important;
+}
+
+@media (max-width: 575px) {
+    .createProject {
+        padding: 3.5rem 30px;
+    }
+
+    .create-project-cont {
+        grid-template-columns: 12fr;
+        row-gap: 30px;
+    }
+
+    .create-add-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 428px) {
+    .attach-text span {
+        font-size: 14px;
+    }
+    .create-form-save,
+    .create-form-submit {
+        width: 50%;
+    }
+
+    .create-form-save button,
+    .create-form-submit button {
+        width: 100%;
+    }
+
+    .create-collaborators button {
+        width: 100% !important;
+    }
+}
